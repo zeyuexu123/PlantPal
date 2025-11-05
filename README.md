@@ -79,13 +79,13 @@ As a user, I can search plant info using an external API.
 
 ## Research Topics
 
-(3 pts) Unit testing: Vitest (test ES6 class methods)
+Unit testing: Vitest (test ES6 class methods)
 
-(3 pts) Build tool: Vite (auto build + dev server)
+Build tool: Vite (auto build + dev server)
 
-(2 pts) CSS framework: Tailwind CSS
+CSS framework: Tailwind CSS
 
-(2 pts) External API: Trefle API for plant info
+External API: Trefle API for plant info
 
 ## [Link to Initial Main Project File]
 
