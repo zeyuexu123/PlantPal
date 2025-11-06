@@ -55,7 +55,7 @@ An Example Plant:
 /plants/:id – view/edit a single plant
 
 ## Site map
-```
+
  ├── Register
  ├── Login
  └── Plants
@@ -63,8 +63,8 @@ An Example Plant:
       ├── View Plant
       ├── Edit Plant
       ├── Delete Plant
-      └── Search
-```
+      └── Search Plant
+
 ## User Stories or Use Cases
 
 As a new user, I can register an account.

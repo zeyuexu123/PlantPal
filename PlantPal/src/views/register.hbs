@@ -1,0 +1,37 @@
+<h1 class="text-2xl font-bold mb-4 text-green-700">Register</h1>
+
+<form action="/auth/register" method="POST" class="max-w-md mx-auto bg-white shadow-md rounded-xl p-6 space-y-4">
+    <div>
+        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
+        />
+    </div>
+
+    <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
+        />
+    </div>
+
+    <button
+        type="submit"
+        class="w-full bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition"
+    >
+        Create Account
+    </button>
+
+    <p class="text-center text-sm text-gray-600 mt-4">
+        Already have an account?
+        <a href="/auth/login" class="text-green-600 hover:underline">Login here</a>
+    </p>
+</form>
