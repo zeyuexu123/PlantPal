@@ -38,9 +38,6 @@ An Example Plant:
 ```
 
 
-## [Link to Commented First Draft Schema]
-
-/src/db.mjs
 
 ## Wireframes
 
