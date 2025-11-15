@@ -7,6 +7,8 @@ Users can log in, add plants, and record how often they need watering.
 Each plant entry includes a name, species, and watering schedule.
 Users can also search for plant care information using an external API.
 
+## Deployment
+https://plantpal-inq8.onrender.com
 
 ## Data Model
 
@@ -37,10 +39,6 @@ An Example Plant:
 }
 ```
 
-
-## [Link to Commented First Draft Schema]
-
-PlantPal/src/db.mjs
 
 ## Wireframes
 
@@ -86,10 +84,6 @@ Build tool: Vite (auto build + dev server)
 CSS framework: Tailwind CSS
 
 External API: Trefle API for plant info
-
-## [Link to Initial Main Project File]
-
-PlantPal/src/app.mjs
 
 ## Annotations / References Used
 
