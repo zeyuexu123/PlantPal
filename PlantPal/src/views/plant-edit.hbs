@@ -1,0 +1,55 @@
+<h2 class="text-2xl font-bold mb-6 text-green-700 text-center">Edit Plant</h2>
+
+<form action="/plants/edit/{{plant._id}}" method="POST" class="max-w-md mx-auto bg-white shadow-md rounded-xl p-6 space-y-4">
+    <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Plant Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            value="{{plant.name}}"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
+        />
+    </div>
+    <div>
+        <label for="species" class="block text-sm font-medium text-gray-700">Species</label>
+        <input
+            type="text"
+            id="species"
+            name="species"
+            value="{{plant.species}}"
+            class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
+        />
+    </div>
+    <div>
+        <label for="waterIntervalDays" class="block text-sm font-medium text-gray-700">Water Interval (days)</label>
+        <input
+            type="number"
+            id="waterIntervalDays"
+            name="waterIntervalDays"
+            min="1"
+            value="{{plant.waterIntervalDays}}"
+            class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
+        />
+    </div>
+    <div>
+        <label for="lastWatered" class="block text-sm font-medium text-gray-700">Last Watered</label>
+        <input
+            type="date"
+            id="lastWatered"
+            name="lastWatered"
+            value="{{plant.lastWatered}}"
+            class="mt-1 block w-full border border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
+        />
+    </div>
+    <button
+        type="submit"
+        class="w-full bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition"
+    >
+        Save Changes
+    </button>
+    <p class="text-center text-sm text-gray-600 mt-4">
+        <a href="/plants" class="text-green-600 hover:underline">← Back to your plants</a>
+    </p>
+</form>

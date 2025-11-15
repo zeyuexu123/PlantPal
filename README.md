@@ -40,38 +40,38 @@ An Example Plant:
 
 ## [Link to Commented First Draft Schema]
 
-/src/db.mjs
+PlantPal/src/db.mjs
 
 ## Wireframes
 
-/register – register form
+/auth/register – register form
 
-/login – login form
+/auth/login – login form
 
-/plants – list of user’s plants, with “Add Plant” button
+/plants – list of user’s plants, with “Add a New Plant”, “Edit”, “Delete” buttons
 
 /plants/add – form to add a new plant
 
-/plants/:id – view/edit a single plant
+/plants/edit/:id – edit a single plant
 
 ## Site map
-
+```
  ├── Register
  ├── Login
+ ├── Search Plant
  └── Plants
       ├── Add Plant
       ├── View Plant
       ├── Edit Plant
-      ├── Delete Plant
-      └── Search Plant
-
+      └── Delete Plant
+```
 ## User Stories or Use Cases
 
 As a new user, I can register an account.
 
 As a user, I can log in and see my plants.
 
-As a user, I can add, edit and delete a plant.
+As a user, I can add and delete a plant.
 
 As a user, I can update plant info.
 
@@ -89,7 +89,7 @@ External API: Trefle API for plant info
 
 ## [Link to Initial Main Project File]
 
-/app.mjs
+PlantPal/src/app.mjs
 
 ## Annotations / References Used
 

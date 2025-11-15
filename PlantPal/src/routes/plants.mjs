@@ -48,10 +48,50 @@ router.post("/add", async (req, res) => {
     }
 });
 
-router.get("/search", async (req, res) => {
-    const q = req.query.q;
-    const results = await searchPlant(q);
-    res.render("plants", { results });
+router.get("/edit/:id", async (req, res) => {
+    try {
+        const plant = await Plant.findById(req.params.id);
+        if (!plant) {
+            return res.status(404).send("Plant not found");
+        }
+        res.render("plant-edit", { plant });
+    } catch (err) {
+        console.error("Error fetching plant:", err);
+        res.status(500).send("Error fetching plant");
+    }
+});
+
+router.post("/edit/:id", async (req, res) => {
+    try {
+        const { name, species, waterIntervalDays, lastWatered } = req.body;
+        await Plant.findByIdAndUpdate(req.params.id, {
+            name,
+            species,
+            waterIntervalDays,
+            lastWatered
+        });
+        res.redirect("/plants");
+    } catch (err) {
+        console.error("Error updating plant:", err);
+        res.status(500).send("Error updating plant");
+    }
+});
+
+router.post("/delete/:id", async (req, res) => {
+    try {
+        const plant = await Plant.findById(req.params.id);
+        if (!plant) {
+            return res.status(404).send("Plant not found");
+        }
+
+        await User.findByIdAndUpdate(plant.user, { $pull: { plants: plant._id } });
+        await Plant.findByIdAndDelete(req.params.id);
+
+        res.redirect("/plants");
+    } catch (err) {
+        console.error("Error deleting plant:", err);
+        res.status(500).send("Error deleting plant");
+    }
 });
 
 export default router;

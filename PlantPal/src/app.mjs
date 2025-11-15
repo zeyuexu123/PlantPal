@@ -9,6 +9,7 @@ import session from "express-session";
 
 import authRoutes from "./routes/auth.mjs";
 import plantRoutes from "./routes/plants.mjs";
+import searchRoutes from "./routes/search.mjs";
 
 dotenv.config();
 const app = express();
@@ -34,7 +35,7 @@ connectDB();
 
 app.use("/auth", authRoutes);
 app.use("/plants", plantRoutes);
+app.use("/search", searchRoutes);
 app.get("/", (req, res) => res.render("index"));
 
 app.listen(PORT, () => console.log(`PlantPal running on http://localhost:${PORT}`));
-
